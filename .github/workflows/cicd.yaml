@@ -1,0 +1,10 @@
+name: learn-github-action
+on: [push]
+jobs:
+  go-version:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup node
+        uses: actions/setup-node@v2
+      - run: ./load-yaml.js
